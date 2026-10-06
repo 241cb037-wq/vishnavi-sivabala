@@ -1,0 +1,26 @@
+{% load static %} <!-- 👈 FIRST LINE - MUST BE THERE -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}Glowcare{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<nav>
+<h2>✨ Glowcare</h2>
+<div>
+<a href="{% url 'home' %}">Home</a>
+<a href="{% url 'about' %}">About</a>
+</div>
+</nav>
+<section class="hero">
+{% block content %}
+{% endblock %}
+</section>
+<footer>
+
+<p>© 2026 Glowcare. All rights reserved.</p>
+</footer>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
